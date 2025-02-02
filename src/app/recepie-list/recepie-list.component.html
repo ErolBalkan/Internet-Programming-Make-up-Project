@@ -1,0 +1,30 @@
+<button [routerLink]="['/recepies/create']">Add Recipe</button>
+
+<div class="recipe-container">
+  <div class="recipe-card" *ngFor="let recipe of recepies">
+    <img [src]="recipe.image_URL" alt="Recipe Image" class="recipe-image" />
+    <h2>{{ recipe.description }}</h2>
+    <p><strong>Cooking Time:</strong> {{ recipe.cooking_time }}</p>
+    <p><strong>Difficulty:</strong> {{ recipe.difficulty_level }}</p>
+    
+    <div class="ingredients">
+      <h3>Ingredients:</h3>
+      <ul>
+        <li *ngFor="let ingredient of recipe.ingredients">
+          {{ ingredient.quantity }} {{ ingredient.name }}
+        </li>
+      </ul>
+    </div>
+    
+    <div class="instructions">
+      <h3>Instructions:</h3>
+      <p>{{ recipe.instructions }}</p>
+    </div>
+
+    <!-- Delete button -->
+    <button> Favorite </button>
+    <button> Edit </button>
+    <button (click)="deleteRecipe(recipe.id)">Delete Recipe</button>
+    <button> View </button>
+  </div>
+</div>

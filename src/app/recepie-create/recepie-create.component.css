@@ -1,0 +1,32 @@
+.recipe-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .recipe-form div {
+    margin-bottom: 12px;
+  }
+  
+  .recipe-form input, .recipe-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .recipe-form button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .recipe-form button:disabled {
+    background-color: #ccc;
+  }
+  
